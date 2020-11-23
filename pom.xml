@@ -71,7 +71,6 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>build.xml</suiteXmlFile>
                     </suiteXmlFiles>
-                    <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
         </plugins>

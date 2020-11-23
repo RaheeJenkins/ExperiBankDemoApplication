@@ -46,7 +46,7 @@ public class BaseClass {
 
         } else if (platform.equalsIgnoreCase("Android")) {
 
-            desiredCapabilities.setCapability("deviceQuery", "@os='android'");
+            desiredCapabilities.setCapability("deviceQuery", "@os='android' and contains(@modelName, 'Galaxy')");
             desiredCapabilities.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank/.LoginActivity");
             desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
             desiredCapabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");

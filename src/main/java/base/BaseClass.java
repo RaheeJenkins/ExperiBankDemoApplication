@@ -54,6 +54,16 @@ public class BaseClass {
 
         }
 
+        
+        String project = System.getenv("JOB_BASE_NAME");
+        
+        if (project == null) {
+            project = System.getenv("JOB_NAME"); 
+        }
+        
+        String buildNumber = System.getenv("BUILD_NUMBER");
+        desiredCapability.setCapability("jenkins", project + "-" + buildNumber);
+        
         wait = new WebDriverWait(getDriver(), 10);
     }
 

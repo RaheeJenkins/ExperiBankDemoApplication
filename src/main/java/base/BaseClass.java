@@ -62,7 +62,7 @@ public class BaseClass {
         }
         
         String buildNumber = System.getenv("BUILD_NUMBER");
-        desiredCapability.setCapability("jenkins", project + "-" + buildNumber);
+        desiredCapabilities.setCapability("jenkins", project + "-" + buildNumber);
         
         wait = new WebDriverWait(getDriver(), 10);
     }
